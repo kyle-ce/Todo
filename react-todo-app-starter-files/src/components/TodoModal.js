@@ -18,9 +18,11 @@ function TodoModal({ modalOpen, setModalOpen }) {
             className={styles.closeButton}
             onClick={() => setModalOpen(false)}
             onKeyDown={() => setModalOpen(false)}
+            // div as a button need tabindex and role
             tabIndex={0}
             role="button"
           >
+            {/* formats the "x" in close button for modal */}
             <MdOutlineClose />
           </div>
           <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
